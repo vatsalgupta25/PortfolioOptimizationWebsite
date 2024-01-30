@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>Welcome to Project 1</h1>
+    <p1>Kindly enter the following</p1>
+    <p2> Let's start with the profile creation</p2>
+    <div class = "Email">
+        <p> Enter a valid Email:</p>
+        <form action="/home" method="post">
+            <label for="user_input">User Input:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
