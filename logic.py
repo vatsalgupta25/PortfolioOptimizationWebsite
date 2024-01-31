@@ -14,12 +14,28 @@ def data(age,amount):
 
 # def AreaOfInvestment(age, amount):
     if (18<age<30):
-        t = "MF: Small and Flexi Cap\nBonds: Infrastrucure(PPP)\nGold: Digital Gold\nEquity: Small Cap\nCrpyto: AltCoins\n"
+        t = { 'MF':'Small and Flexi Cap',
+        'Bonds':'Infrastrucure(PPP)',
+        'Gold':'Digital Gold',
+        'Equity':'Small Cap',
+        'Crypto':'AltCoins'}        
     elif (31<age<50):
-        t = "MF: Medium and Flexi Cap\nBonds: Infrastrucure(PPP)\nGold: Digital Gold\nEquity: Small Cap\nCrpyto: StableCoins\n"
+        t = { 'MF':'Mid and Flexi Cap',
+        'Bonds':'Infrastrucure(PPP)',
+        'Gold':'Digital Gold',
+        'Equity':'Small Cap',
+        'Crypto':'StableCoins'}
     elif (51<age<60):
-        t = "MF: Large and Flexi Cap\nBonds: Govt. \nGold: Physical Gold\nEquity: medium Cap\nCrpyto: - \n"
+        t = { 'MF':'Large and Flexi Cap',
+        'Bonds':'Govt.',
+        'Gold':'Physical Gold',
+        'Equity':'Mid Cap',
+        'Crypto':'    -     '}
     else:
-        t = "MF: Large Cap\nBonds: Govt. \nGold: Physical Gold\nEquity: Large Cap\nCrpyto: - \n"
+        t = { 'MF':'Small and Flexi Cap',
+        'Bonds':'Infrastrucure(PPP)',
+        'Gold':'Digital Gold',
+        'Equity':'Small Cap',
+        'Crypto':'AltCoins'}
     return t
-
+    

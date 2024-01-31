@@ -1,8 +1,15 @@
 from flask import Flask, render_template, request, render_template_string
 from logic import data
 import re
+from tabulate import tabulate
 
 app = Flask(__name__)
+
+def dict_to_html_table(data):
+    headers = data.keys()
+    rows = [list(data.values())]
+    table_html = tabulate(rows, headers, tablefmt='html')
+    return table_html
 
 @app.route('/')
 def index():
@@ -23,8 +30,14 @@ def process_input():
 @app.route('/logic', methods = ['POST'])
 def logic():
     param1 = int(request.form['age'])
+    param2 = str(request.form['name'])
+    param3 = int(request.form['income'])
     a = data(param1,100)
-    return render_template('logic.html', a=a)
+    b = param2
+    c = 0.7*param3
+    d = param1
+    html_table = dict_to_html_table(a)
+    return render_template('logic.html', a=html_table, b=b, c=c, d=d)
 
 if __name__ == '__main__':
     app.run(debug=True)
